@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+*.mp4
+*.avi
+*.mov
+*.zip
+*.rar
+*.7z
+*.iso
+*.psd
+*.jpg
+*.jpeg
+*.png
