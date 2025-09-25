@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
 }
 
 @theme inline {
@@ -20,7 +21,55 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgba(255, 255, 255, 0.925);
+  margin-top: -75px;
+
+;
+ 
+}
+/* Cacher le logo Next.js en mode dev */
+[data-nextjs-dialog-root] {
+  display: none !important;
+}
+
+.LOGO{
+  height: 200px;
+  width: 400px;
+}
+
+
+
+
+@keyframes slide-left {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-up {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-left {
+  animation: slide-left 1.5s forwards; /* durée plus lente */
+}
+
+.animate-slide-left-delay-1 {
+  animation: slide-left 1.5s 0.5s forwards; /* délai un peu plus long */
+}
+
+.animate-slide-left-delay-2 {
+  animation: slide-left 1.5s 1s forwards; /* délai pour les boutons */
+}
+
+.animate-slide-up {
+  animation: slide-up 1.5s forwards;
+}
+
+.animate-slide-up-delay-1 {
+  animation: slide-up 1.5s 0.5s forwards;
+}
+
+.animate-slide-up-delay-2 {
+  animation: slide-up 1.5s 1s forwards;
 }
