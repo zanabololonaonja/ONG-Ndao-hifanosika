@@ -73,3 +73,180 @@ body {
 .animate-slide-up-delay-2 {
   animation: slide-up 1.5s 1s forwards;
 }
+
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+
+
+
+.section-title {
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.section-title .bg-text {
+  font-size: 5rem;              /* très grand en arrière-plan */
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);   /* gris très clair */
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.section-title h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.section-title h2 .highlight {
+  color:  #9b4b7c; /* couleur accent (comme "Concrete" sur ton image) */
+}
+
+.section-title p {
+  margin-top: 1px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 19%;
+  width: 66px;
+  height: 5px;
+  background: #9b4b7c; /* même couleur que le mot en surbrillance */
+  transform: translateY(-50%);
+}
+
+figure.snip1157 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+}
+figure.snip1157 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+figure.snip1157 img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: 40px 0 0 10px;
+}
+figure.snip1157 blockquote {
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background: rgba(200, 200, 200, 0.089); /* gris clair + transparence */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-top: 4px solid #9b4b7c; /* bordure uniquement en haut */
+  padding: 25px 50px 30px 50px;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 39px;
+  line-height: 1.6em;
+  font-style: italic;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet hover : zoom + ombre */
+figure.snip1157 blockquote:hover {
+  transform: scale(1.05); /* agrandit légèrement */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* ajoute une ombre */
+}
+
+figure.snip1157 blockquote:before,
+figure.snip1157 blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+figure.snip1157 blockquote:before {
+  top: 25px;
+  left: 20px;
+}
+figure.snip1157 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 0;
+}
+figure.snip1157 .arrow {
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid rgba(200, 200, 200, 0.082);
+  margin: 0;
+  position: absolute;
+}
+figure.snip1157 .author {
+  position: absolute;
+  bottom: 45px;
+  padding: 0 10px 0 120px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #000000;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+}
+figure.snip1157 .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+figure.snip1157 .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 5px;
+}
+
+.avatar {
+  width: 80px;           /* taille du cercle */
+  height: 80px;
+  border-radius: 50%;    /* rend l’image circulaire */
+  object-fit: cover;     /* recadre l’image si elle n’est pas carrée */
+  border: 3px solid #2596be; /* petite bordure colorée */
+  margin: 15px auto;     /* centre et ajoute de l’espace */
+  display: block;        /* centre en block */
+}
+
+
+/* Demo purposes only */
+html {
+  height: 100%;
+}
+.testimonials {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  flex-wrap: wrap;         /* permet de passer à la ligne sur petit écran */
+  gap: 20px;               /* espace entre les cards */
+}
