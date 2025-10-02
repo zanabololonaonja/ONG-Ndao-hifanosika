@@ -79,7 +79,7 @@ body {
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
 
 
-
+ /* temoinage */
 
 .section-title {
   position: relative;
@@ -112,7 +112,15 @@ body {
   color:  #9b4b7c; /* couleur accent (comme "Concrete" sur ton image) */
 }
 
+
 .section-title p {
+  margin-top: 1px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+.section-ti p {
   margin-top: 1px;
   font-size: 0.95rem;
   color: #555;
@@ -122,13 +130,17 @@ body {
   content: "";
   position: absolute;
   top: 50%;
-  left: 19%;
+  left: 12%; /* ← Ajustez cette valeur pour déplacer le tiret */
   width: 66px;
   height: 5px;
-  background: #9b4b7c; /* même couleur que le mot en surbrillance */
+  background: #9b4b7c;
   transform: translateY(-50%);
+} 
+.section-title.no-auto-tiret::before {
+  display: none;
 }
 
+/* contenu temoinage */
 figure.snip1157 {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
@@ -155,6 +167,19 @@ figure.snip1157 img {
   border-radius: 50%;
   margin: 40px 0 0 10px;
 }
+
+.arrow {
+  position: absolute;
+  bottom: -10px; /* sort en bas du blockquote */
+  left: 20%;     /* centré */
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; 
+  border-right: 10px solid transparent; 
+  border-top: 10px solid #3a3939; /* même couleur que bg-gray-100 */
+}
+
 figure.snip1157 blockquote {
   display: block;
   border-radius: 8px;
@@ -249,4 +274,65 @@ html {
   justify-content: center; /* centre horizontalement */
   flex-wrap: wrap;         /* permet de passer à la ligne sur petit écran */
   gap: 20px;               /* espace entre les cards */
+}
+
+
+
+
+
+
+
+/* From Uiverse.io by PriyanshuGupta28 */ 
+.marquee {
+  overflow: hidden;
+  /* hide the scrolling overflow */
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+.marquee_header {
+  font-size: 35px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.marquee__inner {
+  display: flex;
+  width: max-content;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee__group {
+  display: flex;
+}
+
+.marquee__group span {
+  margin: 0 1.5rem;
+  white-space: nowrap;
+  background: #000000;
+  color: white;
+  padding: 4px 16px 4px 12px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
