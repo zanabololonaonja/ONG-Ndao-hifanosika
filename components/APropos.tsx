@@ -185,7 +185,7 @@ export default function APropos({ lang = "fr", setLang }: { lang?: string; setLa
           </div>
 
           {/* Description à droite */}
-          <div className="flex-1 text-justify text-lg -mt-66 font-semibold">
+          <div className="flex-1 text-justify text-lg -mt-66 font-semibold ">
             <motion.div
               initial={{ x: 200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -294,9 +294,9 @@ export default function APropos({ lang = "fr", setLang }: { lang?: string; setLa
                   <div className="absolute right-20 top-10 h-[80%] p-6 text-black text-sm font-semibold flex flex-col justify-between w-[40%]">
                     <div className="text-justify break-words leading-relaxed">
                       <div className="flex justify-center -mt-7">
-                        <a href="/boky.jpg" target="_blank" rel="noopener noreferrer">
+                        <a href="/lary.jpg" target="_blank" rel="noopener noreferrer">
                           <img
-                            src="/boky.jpg"
+                            src="/lary.jpg"
                             alt="illustration"
                             className="w-80 h-89 object-contain cursor-pointer rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
                           />
@@ -335,9 +335,9 @@ export default function APropos({ lang = "fr", setLang }: { lang?: string; setLa
                   {/* droite */}
                   <div className="absolute right-20 top-10 h-[80%] p-6 text-black text-sm font-semibold flex flex-col justify-between w-[40%]">
                     <div className="flex justify-center -mt-7">
-                      <a href="/bok.jpg" target="_blank" rel="noopener noreferrer">
+                      <a href="/page2.jpg" target="_blank" rel="noopener noreferrer">
                         <img
-                          src="/bok.jpg"
+                          src="/page2.jpg"
                           alt="illustration"
                           className="w-80 h-70 object-contain cursor-pointer rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
                         />

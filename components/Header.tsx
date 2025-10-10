@@ -20,6 +20,7 @@ export default function Header() {
       projects: "Réalisations",
       news: "Actualités",
       contact: "Contact",
+      connecter:"se connecter",
       donate: "Faire un don",
       langLabel: "Français",
       flag: "🇫🇷",
@@ -31,6 +32,7 @@ export default function Header() {
       projects: "Projects",
       news: "News",
       contact: "Contact",
+      connecter:"log in ",
       donate: "Donate",
       langLabel: "English",
       flag: "🇬🇧",
@@ -42,6 +44,7 @@ export default function Header() {
       projects: "Tetikasa",
       news: "Vaovao",
       contact: "Fifandraisana",
+      connecter:"Hiditra",
       donate: "Fanomezana",
       langLabel: "Malagasy",
       flag: "🇲🇬",
@@ -52,7 +55,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50">
-      <nav className="mx-10 backdrop-blur-md bg-white/50 shadow-md rounded-xl px-6 py-3 flex items-center justify-between">
+      <nav className="mx-2  backdrop-blur-md bg-white/50 shadow-md rounded-xl px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-0">
           <img className="h-13" />
@@ -64,7 +67,7 @@ export default function Header() {
             <Link href="#home" className="hover:text-[#7c3b63] transition-colors duration-300">
               {t.home}
             </Link>
-          </li>
+          </li> 
           <li className="border-l border-gray-300 pl-4">
             <Link href="#about" className="hover:text-[#7c3b63] transition-colors duration-300">
               {t.about}
@@ -80,26 +83,37 @@ export default function Header() {
               {t.projects}
             </Link>
           </li>
+         {/* Dans votre composant où se trouve le bouton "Voir les actualités" */}
           <li className="border-l border-gray-300 pl-4">
-            <Link href="#projects" className="hover:text-[#7c3b63] transition-colors duration-300">
-              {t.news}
-            </Link>
+            <Link 
+  href="/actualites"
+  className="hover:text-[#7c3b63] transition-colors duration-300"
+>
+ {t.news}
+ 
+</Link>
           </li>
+
           <li className="border-l border-gray-300 pl-4">
             <Link href="#contact" className="hover:text-[#7c3b63] transition-colors duration-300">
-              {t.contact}
+              {t.contact}   
             </Link>
           </li>
-
+   <li className="border-l border-gray-300 pl-4">
+  <Link href="/login">
+    <button className="flex items-center hover:bg-[#7c3b63] cursor-pointer text-#9b4b7c font-bold px-4 py-2 rounded-lg shadow-md transition duration-300">
+   {t.connecter}
+    </button>
+  </Link>
+</li>
           {/* Bouton Faire un don */}
-          <li className="border-l border-gray-300 pl-4">
-            <Link href="/login">
-              <button className="flex items-center bg-[#9b4b7c] hover:bg-[#7c3b63] cursor-pointer text-white font-bold px-4 py-2 rounded-lg shadow-md transition duration-300">
-                <span>{t.donate}</span>
-              </button>
-            </Link>
-          </li>
-
+         <li className="border-l border-gray-300 pl-4">
+  <Link href="/login">
+    <button className="flex items-center bg-[#9b4b7c] hover:bg-[#7c3b63] cursor-pointer text-white font-bold px-4 py-2 rounded-lg shadow-md transition duration-300">
+   {t.donate}
+    </button>
+  </Link>
+</li>
           {/* Sélecteur de langue */}
           <li className="relative border-l border-gray-300 pl-4">
             <button
